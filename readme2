@@ -1,0 +1,73 @@
+# SQL Assignment - Database Joins
+
+This repository contains SQL queries demonstrating different types of JOIN operations on a sample database.
+
+## 📋 Assignment Overview
+
+This assignment focuses on understanding and implementing various SQL JOIN operations to retrieve data from multiple related tables.
+
+## 🗄️ Database Schema
+
+The queries work with the following tables:
+- **employees** - Contains employee information
+- **offices** - Contains office location data
+- **products** - Contains product catalog
+- **productlines** - Contains product line categories
+- **orders** - Contains order information
+- **customers** - Contains customer data
+
+## 📝 Questions & Solutions
+
+### Question 1: Employee Office Information 🧑‍💼
+**Objective:** Retrieve employee details with their office codes using INNER JOIN
+
+**Query:** Get `firstName`, `lastName`, `email`, and `officeCode` of all employees by joining the `employees` and `offices` tables.
+
+**JOIN Type:** INNER JOIN - Returns only employees who have matching office records.
+
+### Question 2: Product Information 🛍️
+**Objective:** Retrieve product details with product line information using LEFT JOIN
+
+**Query:** Get `productName`, `productVendor`, and `productLine` from the products table, including product line details.
+
+**JOIN Type:** LEFT JOIN - Returns all products, even those without matching product line records.
+
+### Question 3: Order Details 📦
+**Objective:** Retrieve order information with customer data using RIGHT JOIN
+
+**Query:** Get `orderDate`, `shippedDate`, `status`, and `customerNumber` for the first 10 orders.
+
+**JOIN Type:** RIGHT JOIN - Returns all orders, even those without matching customer records.
+
+## 🚀 How to Run
+
+1. Ensure you have access to the database with the required tables
+2. Execute each query in your SQL environment (MySQL, PostgreSQL, etc.)
+3. Review the results to understand how different JOIN types affect the output
+
+## 🔍 Key Learning Points
+
+- **INNER JOIN:** Returns records that have matching values in both tables
+- **LEFT JOIN:** Returns all records from the left table, and matched records from the right table
+- **RIGHT JOIN:** Returns all records from the right table, and matched records from the left table
+
+## 📊 Expected Results
+
+- **Question 1:** All employees with valid office assignments
+- **Question 2:** All products with their product line information (if available)
+- **Question 3:** First 10 orders with customer information (if available)
+
+## 📚 Additional Notes
+
+- The `LIMIT 10` clause in Question 3 restricts results to the first 10 records
+- Each query uses table aliases (`e`, `o`, `p`, etc.) for cleaner, more readable code
+- JOIN conditions use the specified columns (`officeCode`, `productLine`, `customerNumber`)
+
+## 🛠️ Technologies Used
+
+- SQL (Standard Query Language)
+- Database Management System (MySQL/PostgreSQL/SQL Server compatible)
+
+---
+
+*This assignment demonstrates fundamental SQL JOIN operations essential for working with relational databases.*
